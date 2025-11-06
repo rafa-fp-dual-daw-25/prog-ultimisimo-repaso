@@ -22,7 +22,7 @@ public class Main {
                 {16, 17, 18, 19, 20},
                 {21, 22, 23, 24, 25}};
 
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] array = {1, 3, 2, 9, 7, 10, 8};
         String parImpar = "impar";
         int num = 7;
 
@@ -210,13 +210,8 @@ public class Main {
     }
 
     public static int[] enteros(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i + 1] > array[i]) {
-                int temp = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = temp;
-            }
-        }
+        //IMPORTAR (import java.util.Arrays;)
+        Arrays.sort(array);
         return array;
     }
 }
