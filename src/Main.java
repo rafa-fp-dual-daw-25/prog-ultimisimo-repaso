@@ -5,6 +5,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
 //        int[][] matrix = new int[2][2];
@@ -25,6 +26,7 @@ public class Main {
         int[] array = {1, 3, 2, 9, 7, 10, 8};
         String parImpar = "impar";
         int num = 7;
+        double bytes = 1000000000000.0;
 
 //        llenarMatriz(matrix);
 //        System.out.println((sumMatrix(matrix)));
@@ -37,8 +39,9 @@ public class Main {
 //        System.out.println(Arrays.toString(numerosDoble(array)));
 //        System.out.println(Arrays.toString(generateArray(parImpar)));
 //        System.out.println(Arrays.toString(arrayInvert(array)));
-        System.out.println(Arrays.toString(getRandom(num)));
-        System.out.println(Arrays.toString(enteros(array)));
+//        System.out.println(Arrays.toString(getRandom(num)));
+        System.out.println(Arrays.toString(numsOrdenados(array)));
+        System.out.println(Arrays.toString(conversorByte(bytes)));
     }
 
     public static void llenarMatriz(int[][] matrix) {
@@ -209,9 +212,26 @@ public class Main {
         return random;
     }
 
-    public static int[] enteros(int[] array) {
+    public static int[] numsOrdenados(int[] array) {
         //IMPORTAR (import java.util.Arrays;)
         Arrays.sort(array);
         return array;
+    }
+
+    public static double[] conversorByte(double bytes) {
+        double[] conversorByte = new double[5];
+
+        double kilobytes = bytes / 1024;
+        double megabytes = bytes / Math.pow(1024, 2); //(1024 * 1024)
+        double gigabytes = bytes / Math.pow(1024, 3); //(1024 * 1024 * 1024)
+        double terabytes = bytes / Math.pow(1024, 4); //1024 * 1024 * 1024 * 1024)
+
+        conversorByte[0] = terabytes;
+        conversorByte[1] = gigabytes;
+        conversorByte[2] = megabytes;
+        conversorByte[3] = kilobytes;
+        conversorByte[4] = bytes;
+
+        return conversorByte;
     }
 }

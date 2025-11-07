@@ -40,14 +40,15 @@ palabra es par devuelve los primeros 20 numeros pares en un array. Si es
 impar devuelve los primeros 20 números impares.
 
 3. Crea una función que dado un array devuelve el mismo array, pero inverso.
+
 4. Crea una función que dado un entero como argumento devuelva un array
 de las mismas posiciones con números random.
 
 
 
 Lógica:
-1. Crea una función que dado un array de enteros los devuelva ordenados de
+1. Crea una función getRandom(int num) que dado un array de enteros los devuelva ordenados de
 menor a mayor.
 
-2. Crea una función que, pasados un total de bytes, devuelva los Terabytes,
+2. Crea una función enteros(int[] array) que, pasados un total de bytes, devuelva los Terabytes,
 Gigabytes, Megabytes, Kilobytes y bytes que hay.
